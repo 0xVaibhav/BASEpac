@@ -1,5 +1,5 @@
 import React from 'react';
-import PacmanLogo from '../../components/PacmanLogo';
+import PacmanLogo from './components/PacmanLogo';
 
 const Home: React.FC = () => {
   return (
