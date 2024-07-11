@@ -1,6 +1,4 @@
-import { chain } from '@/app/chain';
-import { client } from '@/app/client';
-import { ConnectButton } from '@/app/thirdweb';
+
 import Link from 'next/link';
 
 const Navbar = () => {
@@ -11,9 +9,6 @@ const Navbar = () => {
         <img src="/logo.jpg" alt="BASEpac Logo" width={45} className=""/>
         <span className="pt-5 text-xl text-bold">BASEpac</span>
       </Link>
-
-      <ConnectButton client={client}
-      chain={chain}/>
     </nav>
   );
 };

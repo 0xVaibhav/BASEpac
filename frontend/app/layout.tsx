@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import '../app/globals.css';
-import { ThirdwebProvider } from './thirdweb';  // Adjust the import path as necessary
 
 interface LayoutProps {
   children: ReactNode;
@@ -13,7 +12,6 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <html lang="en">
       <body className="flex-1 flex flex-col relative">
-        <ThirdwebProvider>
           <Navbar />
           <div className="flex bg-black pt-0.5 text-white">
             <Sidebar />
@@ -29,7 +27,6 @@ const Layout = ({ children }: LayoutProps) => {
             </main>
           </div>
           <Footer />
-        </ThirdwebProvider>
       </body>
     </html>
   );

@@ -1,9 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import {useActiveAccount} from 'thirdweb/react';
-import { ConnectEmbed } from './thirdweb';
-import { client } from './client';
-import { chain } from './chain';
 const HomePage = () => {
   const [isGlowing, setIsGlowing] = useState(false);
   const [showPlusOne, setShowPlusOne] = useState(false);
@@ -22,8 +18,8 @@ const HomePage = () => {
       setShowPlusOne(false);
     }, 200);
   };
- const account = useActiveAccount();
- if(account){
+
+
   return (
     <div className="relative flex flex-col items-center min-h-full bg-transparent border-spacing-0 text-white">
       <h1 className="text-6xl font-bold mb-4 z-10 pt-4 pb-8">Welcome to BASEpac</h1>
@@ -43,14 +39,7 @@ const HomePage = () => {
         )}
       </div>
     </div>
-  );}
-  else{ return(
-    <div className='relative flex flex-col items-center min-h-full justify-center'>
-    <ConnectEmbed 
-    client={client}
-    chain={chain}/> </div>);
-    
-  }
+  );  
 };
 
 
